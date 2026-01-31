@@ -6,13 +6,14 @@ export default function Layout() {
       <Stack.Screen 
         name="index" 
         options={{
-          headerShown: false
+            title: "Settings",
+            headerShown: false
         }}
       />
       <Stack.Screen 
         name="[slug]" 
         options={{
-          headerShown: false
+            headerShown: false
         }}
       />
     </Stack>

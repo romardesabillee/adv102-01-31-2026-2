@@ -1,13 +1,28 @@
 import { useLocalSearchParams } from "expo-router";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 
-export default function Settings() {
+export default function SettingsSlug() {
     const { slug } = useLocalSearchParams();
+
+    if(slug === "about") {
+        return (
+            <View>
+                <Text>About Page</Text>
+            </View>
+        )
+    }
+
+    if(slug === "general-settings") {
+        return (
+            <View>
+                <Text>General Settings Page</Text>
+            </View>
+        )
+    }
 
     return (
         <View>
-            {slug === "about" ? "About Page": ""}
-            {slug === "general-settings" ? "General Settings Page": ""}
+            <Text>Page Does not Exist</Text>
         </View>
     )
 }
